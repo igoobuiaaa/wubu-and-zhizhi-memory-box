@@ -1,0 +1,39 @@
+/* 设置全局字体和背景 */
+body {
+    font-family: "微软雅黑", "Arial", sans-serif; /* 选择柔和的字体 */
+    background-color: #fff8e1; /* 温暖的米白色背景 */
+    color: #5c4033; /* 温暖的棕色文字 */
+    text-align: center; /* 让文字居中 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 2.5em;
+    color: #d48f72; /* 温柔的浅粉色 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 添加淡淡的阴影 */
+    margin-top: 50px;
+}
+
+/* 副标题样式 */
+p {
+    font-size: 1.2em;
+    color: #8d6e63; /* 低饱和度的棕色 */
+}
+
+/* 让页面更有趣的动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, p {
+    animation: fadeIn 1s ease-in-out;
+}
