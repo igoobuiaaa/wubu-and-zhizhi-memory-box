@@ -1,3 +1,5 @@
+
+@@ -0,0 +1,39 @@
 /* 设置全局字体和背景 */
 body {
     font-family: "微软雅黑", "Arial", sans-serif; /* 选择柔和的字体 */
@@ -10,15 +12,15 @@ body {
 
 /* 标题样式 */
 h1 {
-    font-size: 2.5 em;
+    font-size: 2.5em;
     color: #d48f72; /* 温柔的浅粉色 */
-    text-shadow: 2 px 2 px 5 px rgba (0, 0, 0, 0.1); /* 添加淡淡的阴影 */
-    margin-top: 50 px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 添加淡淡的阴影 */
+    margin-top: 50px;
 }
 
 /* 副标题样式 */
 p {
-    font-size: 1.2 em;
+    font-size: 1.2em;
     color: #8d6e63; /* 低饱和度的棕色 */
 }
 
@@ -26,7 +28,7 @@ p {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10 px);
+        transform: translateY(-10px);
     }
     to {
         opacity: 1;
