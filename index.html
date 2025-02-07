@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wubu & zhizhi's Memory Box</title>
     <style>
+        <script>
+    window.onload = function() {
+        alert ("欢迎来到 wubu & zhizhi 的小天地！✿");
+    };
+</script>
+        <p id="daysCount"></p>
+
+<script>
+    function calculateDays() {
+        const startDate = new Date("2024-08-19"); // 这里填 wubu 和 知知 相识的日期
+        const today = new Date();
+        const timeDiff = today - startDate;
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+        document.getElementById("daysCount").innerText = "wubu 和 知知 已经认识 " + days + " 天啦！";
+    }
+
+    window.onload = calculateDays;
+</script>
         body {
     font-family: "Arial", sans-serif; /* 选择简洁易读的字体 */
     text-align: center; /* 让内容居中 */
@@ -29,4 +48,24 @@ p {
     <h1>欢迎来到 wubu 和 zhizhi 的小天地！</h1>
     <p>这里是我们的记忆存储室，记录我们所有的点点滴滴✨</p>
 </body>
+    <div>
+    <h2>留言板</h2>
+    <input type="text" id="messageInput" placeholder="写下想对对方说的话...">
+    <button onclick="addMessage()">发送</button>
+    <ul id="messageList"></ul>
+</div>
+    <script>
+    function addMessage() {
+        const messageInput = document.getElementById("messageInput");
+        const messageList = document.getElementById("messageList");
+
+        if (messageInput.value.trim() !== "") {
+            const newMessage = document.createElement("li");
+            newMessage.textContent = messageInput.value;
+            messageList.appendChild(newMessage);
+
+            messageInput.value = ""; // 发送后清空输入框
+        }
+    }
+</script>
 </html>
